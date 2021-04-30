@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>chap13-file-io-lecture-source</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- web.xml은 모두 context(web/tomcat)에 들어가 있다! -->
+  <!-- param-value가 root directory이고, cmd에서 \\를 두개 해줘야 하나로 인식됨 -->
+  <context-param>
+ 	<param-name>upload-location</param-name>
+ 	<param-value>F:\\TheJoeun\\JSPServlet\\fileupload</param-value>	
+  </context-param>
+  <context-param>
+  	<param-name>max-file-size</param-name>
+  	<param-value>10000000</param-value>
+  	<!-- 바이트 단위로 되어 있으니 계산해서 사이즈를 넣어줄 것: 10mb 정도 설정 -->
+  </context-param>
+    <context-param>
+  	<param-name>encoding-type</param-name>
+  	<param-value>UTF-8</param-value>
+  </context-param>
+</web-app>
